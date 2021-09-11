@@ -1,5 +1,6 @@
 import React from "react";
 import Main from "./Main";
+import Search from "./Search"
 
 
 class LandingPage extends React.Component {
@@ -8,6 +9,7 @@ class LandingPage extends React.Component {
     this.state = {
       items: [],
       isLoaded: false,
+      query: ''
     };
   }
 
@@ -45,9 +47,12 @@ class LandingPage extends React.Component {
     if (!this.state.isLoaded) {
       return <div>Loading</div>;
     }
+    const filteredUsers = this.state.items.filter(item => item.name.toLowerCase().includes(this.state.query.toLowerCase()));
+
     return (
       <div>
-        <Main items={this.state.items} />
+        <Search search={(q)=>this.setState(q)} query={this.state.query}/>
+        <Main items={filteredUsers} />
       </div>
     );
   }

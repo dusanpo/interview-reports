@@ -1,10 +1,8 @@
 import React from "react";
-//import { UseHistory as history } from "./UseHistory";
-
+import { withRouter } from 'react-router-dom';
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       email: "",
       password: "",
@@ -36,7 +34,7 @@ class LoginPage extends React.Component {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + USER_ACCESS_TOKEN,
+        
       },
       body: JSON.stringify(payload),
     })
@@ -44,7 +42,7 @@ class LoginPage extends React.Component {
       .then((data) => {
         console.log("Success:", data);
         localStorage.setItem("token", JSON.stringify(data.accessToken));
-        //history.push("/loginPage");
+        this.props.history.push("/");
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -71,4 +69,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default LoginPage;
+export default withRouter(LoginPage);

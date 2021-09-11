@@ -10,23 +10,20 @@ import LandingPage from "./components/LandingPage";
 
 function App() {
   let history = useHistory();
-  let header = <Header />;
   let token = localStorage.getItem("token");
   if (!token) {
-    history.push("/landingPage");
-    header = null;
+    history.push("/loginPage");
+  } else {
+    history.push("/");
   }
 
   return (
     <div>
-      {header}
+      {token ? <Header /> : <></>}
       <Switch>
+        <Route exact path="/" component={LandingPage} />
         <Route exact path="/home" component={Home} />
-        <Route exact path="/landingPage" component={LandingPage} />
         <Route exact path="/loginPage" component={LoginPage} />
-        <Route exact path="/">
-          <Redirect to="/loginPage" />
-        </Route>
       </Switch>
     </div>
   );
