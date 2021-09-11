@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: gray;
+  min-height: 10vh;
+}
+.links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+h3 {
+  font-size: 40px !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
