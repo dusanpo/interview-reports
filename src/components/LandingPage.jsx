@@ -1,7 +1,6 @@
 import React from "react";
-import Header from "./partials/Header";
 import Main from "./Main";
-import Footer from "./partials/Footer";
+
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -48,9 +47,7 @@ class LandingPage extends React.Component {
     }
     return (
       <div>
-        <Header />
         <Main items={this.state.items} />
-        <Footer />
       </div>
     );
   }

@@ -45,6 +45,7 @@ class LoginPage extends React.Component {
                 "token",
                 JSON.stringify(data.accessToken)
               );
+              //this.history.push("/loginPage");  
             })
             .catch((error) => {
                 console.error('Error:', error);
