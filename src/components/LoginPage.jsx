@@ -51,20 +51,32 @@ class LoginPage extends React.Component {
   render() {
     const { email, password } = this.state;
     return (
-      <div>
-        <form onSubmit={this.submitHandler}>
-          <input type="email" value={email} onChange={this.handleMail} />
-
-          <div>
-            <input
-              type="password"
-              value={password}
-              onChange={this.handlePassword}
-            />
+      <div className = "row login">
+      <div className = "col offset-s4 s4">
+        <div className = "card">
+          <div className = "card-action  white-text">
+           <h3>Login Form</h3>
           </div>
-          <button type="submit">Submit</button>
+          <form onSubmit = {this.submitHandler}>
+          <div className = "card-content">
+         <div className = "form-field">
+           <label htmlFor="email">Email</label>
+           <input type="email" value = {email} onChange = {this.handleMail} />
+         </div><br />
+
+         <div className = "form-field">
+           <label htmlFor="password">Password</label>
+           <input type="password" value = {password} onChange = {this.handlePassword} />
+         </div><br />
+
+         <div className = "form-field center-align">
+       <button type = "submit" className = "btn-large #008B8B">Login</button>
+         </div><br />
+          </div>
         </form>
+        </div>
       </div>
+    </div>
     );
   }
 }
