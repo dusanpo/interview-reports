@@ -3,7 +3,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   color: white;
-  background-color: gray;
+  background-color: rgba(0, 0, 0, .6);
   min-height: 10vh;
 }
 .links {
