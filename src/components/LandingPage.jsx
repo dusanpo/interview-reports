@@ -10,6 +10,7 @@ class LandingPage extends React.Component {
     super(props);
     this.state = {
       items: [],
+      
       isLoaded: false,
       query: ''
     };
@@ -18,7 +19,7 @@ class LandingPage extends React.Component {
   componentDidMount() {
     const USER_ACCESS_TOKEN = JSON.parse(localStorage.getItem("token"));
     if(USER_ACCESS_TOKEN) {
-    fetch("http://localhost:3333/api/candidates", {
+    fetch("http://localhost:3333/api/candidates/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -38,6 +39,7 @@ class LandingPage extends React.Component {
           this.setState({
             isLoaded: true,
             items: data,
+            
           });
         }
       });
