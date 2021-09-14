@@ -3,6 +3,7 @@ import { Switch, Route,  useHistory } from "react-router-dom";
 import Header from "./components/partials/Header";
 import Home from "./components/Home";
 import LoginPage from "./components/LoginPage";
+import SingleCandidate from "./components/SingleCandidate"
 
 import "./App.css";
 
@@ -24,7 +25,7 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/loginPage" component={LoginPage} />
-
+        <Route exact path="/singleCandidate/:id" component={SingleCandidate} />
       </Switch>
     </div>
   );
