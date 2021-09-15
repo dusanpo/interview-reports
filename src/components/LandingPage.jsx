@@ -1,6 +1,6 @@
 import React from "react";
-import Main from "./Main";
-import Search from "./Search"
+import Main from "./Main.jsx";
+import Search from "./Search.jsx";
 
 
 

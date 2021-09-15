@@ -1,6 +1,6 @@
 import React from "react";
-import Reports from "./Reports";
-import CandidateInfo from "./CandidateInfo";
+import Reports from "../Reports.jsx";
+import CandidateInfo from "./candidateInfo/CandidateInfo.jsx";
 
 class SingleCandidate extends React.Component {
     constructor(props) {
