@@ -5,8 +5,8 @@ const Main = ({ items }) => {
   return (
     <div className="row container flexy">
       {items.map((item, index) => (
-        <Link to={`/singleCandidate/${item.id}`}>
-          <div className="col s6 m4" key={index}>
+        <Link to={`/singleCandidate/${item.id}`} key={index}>
+          <div className="col s6 m4" >
             <div className="card">
               <div className="card-image">
                 <img
@@ -30,3 +30,5 @@ const Main = ({ items }) => {
 };
 
 export default Main;
+
+
