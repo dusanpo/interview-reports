@@ -3,15 +3,18 @@ nav {
   justify-content: space-around;
   align-items: center;
   color: white;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: gray;
   min-height: 10vh;
 }
 .links {
-  width: 40%;
+  width: 20%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+.candidateLink{
+  font-size:25px !important;
 }
 a {
   text-decoration: none;
