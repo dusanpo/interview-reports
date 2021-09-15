@@ -2,7 +2,7 @@ import React from "react";
 import Main from "./Main";
 import Search from "./Search"
 
-import "./LoginPage.css";
+
 
 
 class LandingPage extends React.Component {
