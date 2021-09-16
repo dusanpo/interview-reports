@@ -13,7 +13,7 @@ class SingleCandidate extends React.Component {
       };
     }
   
-    fetchReports = () => {
+    getReportsInfo = () => {
         const USER_ACCESS_TOKEN = JSON.parse(localStorage.getItem("token"));
       fetch(
         `http://localhost:3333/api/reports?candidateId=${this.props.match.params.id}`, {
@@ -26,6 +26,7 @@ class SingleCandidate extends React.Component {
 
       )
         .then((res) => {
+          
           return res.json();
         })
         .then((reportData) => this.setState({ reports: reportData }));
@@ -50,7 +51,7 @@ class SingleCandidate extends React.Component {
           });
         });
         console.log(this.state.candidate);
-      this.fetchReports();
+      this.getReportsInfo();
     }
   
     render() {
@@ -58,7 +59,6 @@ class SingleCandidate extends React.Component {
         <div>
           <div className="container">
             <CandidateInfo
-              img={this.state.candidate.avatar}
               name={this.state.candidate.name}
               birthday={this.state.candidate.birthday}
               email={this.state.candidate.email}
