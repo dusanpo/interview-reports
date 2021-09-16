@@ -1,8 +1,10 @@
-.myClass{
-    width:85%;
-    margin-top:20px;
-}
+
 .info{
     font-size: 25px;
     font-weight:600;
+}
+.myImage{
+    height:300px !important;
+    width:400px !important;
+    
 }
