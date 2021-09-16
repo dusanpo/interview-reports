@@ -30,6 +30,7 @@ class Reports extends React.Component {
                     status={report.status}
                     phase={report.phase}
                     note={report.note}
+                    
                 />
             ))}
         </table>
