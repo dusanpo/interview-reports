@@ -64,7 +64,10 @@ class SingleCandidate extends React.Component {
               email={this.state.candidate.email}
               education={this.state.candidate.education}
             />
-            <Reports reports={this.state.reports} />
+            <Reports 
+            reports={this.state.reports}
+            name={this.state.candidate.name}
+             />
           </div>
           
         </div>

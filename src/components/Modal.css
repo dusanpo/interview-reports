@@ -1,0 +1,23 @@
+.flex-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.flex-content-inner{
+    flex: 50%;
+}
+.flex-content-inner{
+    text-align: left;
+}
+.flex-content-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.modal-container{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 30px;
+}
