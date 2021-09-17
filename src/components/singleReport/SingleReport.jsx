@@ -1,5 +1,6 @@
-import React from 'react'
-import Modal from './Modal'
+import React from 'react';
+import Modal from "../modal/Modal.jsx";
+import "./SingleReport.css";
 
 class SingleReport extends React.Component {
     constructor(props) {
@@ -26,11 +27,11 @@ class SingleReport extends React.Component {
                         <td>{this.props.status}</td>
                         <td>
                         
-                            <i class="material-icons" onClick={this.showModal}>remove_red_eye</i>
+                            <i className="material-icons" onClick={this.showModal}>remove_red_eye</i>
                         </td>
                     </tr>
                 </tbody>
-                <Modal
+                <Modal showModal = {this.showModal}
                     name={this.props.name} 
                     show={this.state.show}
                     company={this.props.company}

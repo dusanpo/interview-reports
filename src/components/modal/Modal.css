@@ -1,0 +1,49 @@
+.flex-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+
+  
+}
+.flex-content-inner{
+    flex: 50%;
+}
+
+.flex-content-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.modal-container{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 30px;
+
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding:14px 28px;
+    border-radius: 3%;
+    max-width: 700px;
+    min-width: 300px;
+
+
+}
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    position: fixed;
+    background: rgba(49,49,49, 0.8)
+}
+.pointer{
+    cursor: pointer;
+}
