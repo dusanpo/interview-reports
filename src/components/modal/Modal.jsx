@@ -18,7 +18,7 @@ export default class Modal extends React.Component {
 
             <div className="modal-content modal-container">
                 <div className="flex-content-title">
-                    <h2>{this.props.name}</h2>
+                    <h3>{this.props.name}</h3>
                   
                     <i className="medium material-icons pointer" onClick = {(this.props.showModal)}>cancel</i>
                 </div>

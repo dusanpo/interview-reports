@@ -46,4 +46,12 @@
 }
 .pointer{
     cursor: pointer;
+   color:gray;
+}
+h6{
+    margin-bottom: -10px;
+}
+h5{
+    margin-bottom: 20px;
+    font-weight:500;
 }
