@@ -1,5 +1,5 @@
 import React from 'react';
-import SingleReport from './SingleReport';
+import SingleReport from "./singleReport/SingleReport.jsx";
 import getDate from './Date';
 
 class Reports extends React.Component {

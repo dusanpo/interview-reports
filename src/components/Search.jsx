@@ -17,6 +17,7 @@ export default function Search ({search, query}){
            value={query}
            /> 
         </div>
+   
     )
 }
 
