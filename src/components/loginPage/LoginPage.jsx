@@ -9,6 +9,7 @@ class LoginPage extends React.Component {
     this.state = {
       email: "",
       password: "",
+      userLogedIn:false
     };
   }
   handleMail = (e) => {
@@ -44,8 +45,14 @@ class LoginPage extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
+        if(data.accessToken){
         localStorage.setItem("token", JSON.stringify(data.accessToken));
         this.props.history.push("/");
+        }else{
+          this.setState({
+            userLogedIn: true
+          })
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -72,7 +79,7 @@ class LoginPage extends React.Component {
            <label htmlFor="password">Password</label>
            <input type="password" value = {password} onChange = {this.handlePassword} />
          </div><br />
-
+      {this.state.userLogedIn ? <span className = "user">Type valid email and password!</span> : ""}
          <div className = "form-field center-align">
        <button type = "submit" className = "btn-large #008B8B">Login</button>
          </div><br />
