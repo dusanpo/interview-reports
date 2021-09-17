@@ -5,7 +5,7 @@ import getDate from './Date';
 class Reports extends React.Component {
     constructor(props) {
         super(props)
-    
+        console.log(props)
         this.state = {}
     }
     
@@ -30,7 +30,7 @@ class Reports extends React.Component {
                     status={report.status}
                     phase={report.phase}
                     note={report.note}
-                    
+                    name={this.props.name}
                 />
             ))}
         </table>

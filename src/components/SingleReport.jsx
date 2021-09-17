@@ -13,7 +13,7 @@ class SingleReport extends React.Component {
     
    
       showModal = () => {
-        this.setState({show: true});
+        this.setState({show: !this.state.show});
       };
 
     render() {
@@ -27,17 +27,18 @@ class SingleReport extends React.Component {
                         <td>
                         
                             <i class="material-icons" onClick={this.showModal}>remove_red_eye</i>
-                            <Modal 
-                            show={this.state.show}
-                            company={this.props.company}
-                            date={this.props.date}
-                            phase={this.props.phase}
-                            note={this.props.note}
-                            
-                            ></Modal>
                         </td>
                     </tr>
                 </tbody>
+                <Modal
+                    name={this.props.name} 
+                    show={this.state.show}
+                    company={this.props.company}
+                    date={this.props.date}
+                    phase={this.props.phase}
+                    note={this.props.note}
+                    status={this.props.status}
+                ></Modal>
                 
                 </>
             

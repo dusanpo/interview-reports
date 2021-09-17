@@ -66,6 +66,7 @@ class SingleCandidate extends React.Component {
             />
             <Reports 
             reports={this.state.reports}
+            name={this.state.candidate.name}
              />
           </div>
           
