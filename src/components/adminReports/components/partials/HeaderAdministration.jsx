@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./HeaderAdministration.css";
 
 const Header = () => {
-  let history = useHistory();
+ 
   return (
   
     <nav>
@@ -21,7 +21,6 @@ const Header = () => {
         </Link>
        <button className = "btn #008B8B" onClick = {() =>{
          localStorage.removeItem("token")
-         //history.push("/LoginPage")
          window.location.assign('/')
        } }>Log Out</button>
       </ul>

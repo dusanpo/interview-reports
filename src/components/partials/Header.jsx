@@ -1,13 +1,25 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
-  let history = useHistory();
+  let location = useLocation();
+  console.log(location.pathname);
+  let headerTitle = "Reports"
+  let reportButtons = 
+<Link to="/reportsAdministration">
+  <li className = "reportsAdministation">Create Report</li>
+</Link>
+
+  if(!location.pathname.includes("/reportsAdministration")) {
+    reportButtons = null;
+    headerTitle= "Interview Reports"
+  }
+
   return (
   
     <nav>
-      <h3>Interview Reports</h3>
+      <h3>{headerTitle}</h3>
       <ul className="links">
         
         <Link to="/">
@@ -16,11 +28,13 @@ const Header = () => {
         <Link to="/reportsAdministration">
           <li className = "reportsAdministation">Reports</li>
         </Link>
-       <button className = "btn #008B8B" onClick = {() =>{
+        {reportButtons}
+  <li> <i className="medium material-icons" onClick = {() =>{
          localStorage.removeItem("token")
-         //history.push("/LoginPage")
+        
          window.location.assign('/')
-       } }>Log Out</button>
+       } }>account_circle</i>
+       </li>
       </ul>
     </nav>
   );
