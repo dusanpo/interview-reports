@@ -48,6 +48,7 @@ class LoginPage extends React.Component {
         if(data.accessToken){
         localStorage.setItem("token", JSON.stringify(data.accessToken));
         this.props.history.push("/");
+        //window.location.assign('/');
         }else{
           this.setState({
             userLogedIn: true

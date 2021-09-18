@@ -18,7 +18,7 @@ function App() {
   } else {
     history.push("/");
   }
-
+  
   return (
     <div>
       {token ? <Header /> : <></>}

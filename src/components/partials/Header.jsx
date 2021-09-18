@@ -16,6 +16,7 @@ const Header = () => {
        <button onClick = {() =>{
          localStorage.removeItem("token")
          history.push("/LoginPage")
+         //window.location.assign('/')
        } }>Log Out</button>
       </ul>
     </nav>
