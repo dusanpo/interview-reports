@@ -6,13 +6,8 @@ const Header = () => {
   let location = useLocation();
   console.log(location.pathname);
   let headerTitle = "Reports"
-  let reportButtons = 
-<Link to="/reportsAdministration">
-  <li className = "reportsAdministation">Create Report</li>
-</Link>
 
   if(!location.pathname.includes("/reportsAdministration")) {
-    reportButtons = null;
     headerTitle= "Interview Reports"
   }
 
@@ -28,7 +23,6 @@ const Header = () => {
         <Link to="/reportsAdministration">
           <li className = "reportsAdministation">Reports</li>
         </Link>
-        {reportButtons}
    <img src = "https://www.freeiconspng.com/thumbs/sign-out-icon/sign-out-logout-icon-0.png" alt = ""
     onClick = {() =>{
          localStorage.removeItem("token")
