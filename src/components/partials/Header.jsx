@@ -29,12 +29,13 @@ const Header = () => {
           <li className = "reportsAdministation">Reports</li>
         </Link>
         {reportButtons}
-  <li> <i className="medium material-icons" onClick = {() =>{
+   <img src = "https://www.freeiconspng.com/thumbs/sign-out-icon/sign-out-logout-icon-0.png" alt = ""
+    onClick = {() =>{
          localStorage.removeItem("token")
         
          window.location.assign('/')
-       } }>account_circle</i>
-       </li>
+       } }/>
+       
       </ul>
     </nav>
   );
