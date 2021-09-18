@@ -1,20 +1,23 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import "./Header.css";
+import "./HeaderAdministration.css";
 
 const Header = () => {
   let history = useHistory();
   return (
   
     <nav>
-      <h3>Interview Reports</h3>
+      <h3>Reports Administration</h3>
       <ul className="links">
         
-        <Link to="/">
+       {/*  <Link to="/"> //////TODO add icon for return//////
           <li className = "candidateLink">Candidates</li>
-        </Link>
+        </Link> */}
         <Link to="/reportsAdministration">
           <li className = "reportsAdministation">Reports</li>
+        </Link>
+        <Link to="/reportsAdministration">
+          <li className = "reportsAdministation">Create Report</li>
         </Link>
        <button className = "btn #008B8B" onClick = {() =>{
          localStorage.removeItem("token")

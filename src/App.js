@@ -4,7 +4,9 @@ import Header from "./components/partials/Header.jsx";
 import Footer from "./components/partials/Footer.jsx";
 
 import LoginPage from "./components/loginPage/LoginPage.jsx";
-import SingleCandidate from "./components/candidates/SingleCandidate.jsx"
+import SingleCandidate from "./components/candidates/SingleCandidate.jsx";
+import ReportsAdministration from "./components/adminReports/components/ReportsAdministration";
+import HeaderAdministration from "./components/adminReports/components/partials/HeaderAdministration"
 
 import "./App.css";
 
@@ -19,13 +21,18 @@ function App() {
     history.push("/");
   }
   
+  
   return (
     <div>
       {token ? <Header /> : <></>}
+        
+      
+
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/loginPage" component={LoginPage} />
         <Route exact path="/singleCandidate/:id" component={SingleCandidate} />
+        <Route exact path="/ReportsAdministration" component={ReportsAdministration} />
       </Switch>
       {token ? <Footer /> : <></>}
     </div>
