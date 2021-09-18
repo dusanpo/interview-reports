@@ -13,10 +13,10 @@ const Header = () => {
         <Link to="/">
           <li className = "candidateLink">Candidates</li>
         </Link>
-       <button onClick = {() =>{
+       <button className = "btn #008B8B" onClick = {() =>{
          localStorage.removeItem("token")
-         history.push("/LoginPage")
-         //window.location.assign('/')
+         //history.push("/LoginPage")
+         window.location.assign('/')
        } }>Log Out</button>
       </ul>
     </nav>
