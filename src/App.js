@@ -6,6 +6,7 @@ import Footer from "./components/partials/Footer.jsx";
 import LoginPage from "./components/loginPage/LoginPage.jsx";
 import SingleCandidate from "./components/candidates/SingleCandidate.jsx";
 import ReportsAdministration from "./components/adminReports/components/ReportsAdministration";
+//import CompaniesAdmin from "./components/adminReports/components/CompaniesAdmin";
 
 
 import "./App.css";
@@ -29,8 +30,8 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/loginPage" component={LoginPage} />
         <Route exact path="/singleCandidate/:id" component={SingleCandidate} />
-        <Route exact path="/reportsAdministration" component={ReportsAdministration} />
-       
+        <Route exact path="/reportsAdministration" component={ReportsAdministration} /> 
+        {/* <Route exact path="/company/:id" component={CompaniesAdmin} />  */}
       </Switch>
       {token ? <Footer /> : <></>}
     </div>

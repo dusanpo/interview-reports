@@ -13,11 +13,8 @@ const Header = () => {
        {/*  <Link to="/"> //////TODO add icon for return//////
           <li className = "candidateLink">Candidates</li>
         </Link> */}
-        <Link to="/reportsAdministration">
+        <Link to="/company/:id">
           <li className = "reportsAdministation">Reports</li>
-        </Link>
-        <Link to="/reportsAdministration">
-          <li className = "reportsAdministation">Create Report</li>
         </Link>
        <button className = "btn #008B8B" onClick = {() =>{
          localStorage.removeItem("token")

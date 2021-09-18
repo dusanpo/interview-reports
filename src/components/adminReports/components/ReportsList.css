@@ -1,0 +1,20 @@
+.flex-report {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.input-field {
+    border-radius: 10px;
+    border: 1px black solid;
+}
+.flex-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-report-inner {
+    flex: 50%;
+    display: flex;
+}
