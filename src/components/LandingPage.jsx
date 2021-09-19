@@ -51,7 +51,7 @@ class LandingPage extends React.Component {
     if (!this.state.isLoaded) {
       return <div>Loading</div>;
     }
-    const filteredUsers = this.state.items.filter(item => item.name.toLowerCase().includes(this.state.query.toLowerCase()));
+    const filteredUsers = this.state.items.filter(item => item.name.toLowerCase().includes(this.state.query.toLowerCase().trim()));
 
     return (
       <div>
