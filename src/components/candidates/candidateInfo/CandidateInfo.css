@@ -1,15 +1,4 @@
 
-.info{
-    font-size: 25px;
-    font-weight:600;
-}
-.myImage{
-    height:300px !important;
-    width:400px !important;
-    
-}
-.candidateCard{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
+h6{
+    font-size: 24px;
 }

@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Main.css";
 
 const Main = ({ items }) => {
   return (
-    <div className="row container flexy">
+    <div className="row container">
       {items.map((item, index) => (
         <Link to={`/singleCandidate/${item.id}`} key={index}>
           <div className="col s12 m6 l4" >
@@ -18,8 +19,8 @@ const Main = ({ items }) => {
                 </span>
               </div>
               <div className="card-content">
-                <p className="black-text">{item.education}</p>
-                <p className="black-text">{item.email}</p>
+                <p className="black-text paragraph">{item.education}</p>
+                <p className="black-text paragraph">{item.email}</p>
               </div>
             </div>
           </div>

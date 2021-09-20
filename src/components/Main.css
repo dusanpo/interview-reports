@@ -1,5 +1,5 @@
-.flexy {
-  display: flex;
-  flex: auto;
-  flex-wrap: wrap;
-}
+.paragraph{
+  padding-left: 2px !important;
+  font-size:15px;
+ }
+
