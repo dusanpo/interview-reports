@@ -1,4 +1,5 @@
 import React from 'react';
+import { Row, Col, Card, CardTitle } from 'react-materialize';
 import "./CandidateInfo.css";
 
 
@@ -8,38 +9,33 @@ const CandidateInfo = ( props) => {
   let month = dateOfBirth.getMonth() + 1;
   let year = dateOfBirth.getUTCFullYear();
   return (
-  
-     
-       <div className ="col s12 m7">
-    <div className="card horizontal">
-     
-      <div className="card-image">
-        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = ""  className = "myImage" />
-      </div>
-      <div className="candidateCard">
 
-        <div className = "card-stacked">
-          <div className = " card-content">
-            <p>Name: </p>
-            <p className = "info">{props.name}</p>
-            <p>Email: </p>
-            <p className = "info">{props.email}</p>
-          </div>
-        </div>
-        <div className = "card-stacked"> 
-          <div className = "card-content">
-            <p>Education: </p>
-            <p className = "info">{props.education}</p>
-        
-            <p>Birthday: </p>
-            <p className = "info">{day}.{month}.{year}.</p>
-        </div>
-      </div>
-      </div>
-      </div>
-    </div>
 
-   
+<Row>
+  <Col s={12} m={6} l={3}>
+ <Card
+    header = {<CardTitle image="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Images.png"></CardTitle>}
+  ></Card>
+  </Col>
+  <Col s={12} m={6} l={8}>
+      <Card>
+                   
+      <p>Name:</p>
+      <h6>{props.name}</h6><br/>
+      <p>Email:</p> 
+      <h6>{props.email}</h6><br/>
+      <p>Education:</p>
+      <h6>{props.education}</h6><br/>
+      <p>Birthday: </p>
+      <h6>{day}.{month}.{year}.</h6><br/>
+
+        </Card>
+              
+  </Col>
+
+</Row>
+    
+ 
   );
 }
 
