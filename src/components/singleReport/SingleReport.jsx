@@ -20,6 +20,7 @@ class SingleReport extends React.Component {
     render() {
         return (
                 <>
+                
                 <tbody>
                     <tr>
                         <td>{this.props.company}</td>
@@ -31,6 +32,7 @@ class SingleReport extends React.Component {
                         </td>
                     </tr>
                 </tbody>
+                
                 <Modal showModal = {this.showModal}
                     name={this.props.name} 
                     show={this.state.show}
