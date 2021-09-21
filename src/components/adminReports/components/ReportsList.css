@@ -1,20 +1,25 @@
+.flex-container{
+    width: 100%;
+    
+    
+}
 .flex-report {
-    width: 80%;
+    width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    padding: 20px;
 }
 .input-field {
     border-radius: 10px;
     border: 1px black solid;
 }
+.flex-report-inner {
+    display: flex;
+}
 .flex-add {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.flex-report-inner {
-    flex: 50%;
-    display: flex;
 }

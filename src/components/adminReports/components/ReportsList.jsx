@@ -1,5 +1,5 @@
 import React from 'react'
-import ListReport from "./ListReport";
+import SingleListReport from "./SingleListReport";
 import "./ReportsList.css"
 
 const ReportsList = (props) => {
@@ -17,9 +17,11 @@ const ReportsList = (props) => {
                     </div>
                 </div>
             </div>
-            <ListReport 
-                name = {props.companyName}
+            <div>
+            <SingleListReport 
+                reports = {props.reports}
             />
+            </div>
 
             </>
         )

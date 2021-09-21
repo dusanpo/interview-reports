@@ -8,7 +8,7 @@ class ReportsAdministration extends React.Component {
         console.log(props);
         this.state = {
             reports: [],
-            companies: []
+            filteredReports: []
         }
     }
 
@@ -25,16 +25,18 @@ class ReportsAdministration extends React.Component {
       
       )
         .then((res) => res.json())
-        .then((results) => (console.log(results))
-        
+        .then((results) => 
+        //console.log(results)
+        this.setState({ reports: results })
         );
+        
 
     }
     render() {
         return (
             <div>
                 <ReportsList 
-                    companyName = {this.state.companyName}
+                    reports={this.state.reports}
                 /> 
             </div>
         )
