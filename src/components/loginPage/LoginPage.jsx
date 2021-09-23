@@ -57,7 +57,7 @@ class LoginPage extends React.Component {
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("wrong email or password!")
+        
       });
   };
   render() {

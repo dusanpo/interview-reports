@@ -1,6 +1,6 @@
 import React from 'react'
 import getDate from '../../Date'
-//import "./SingleListReport.css"
+import "./SingleListReport.css"
 import Modal from '../../modal/Modal'
 
 class SingleListReport extends React.Component {
@@ -54,7 +54,7 @@ class SingleListReport extends React.Component {
                         </td>
                         <td className="flex-single-row">
                             <i className="small material-icons" onClick={()=>this.openModal(report)}>remove_red_eye</i>
-                            <i className="small material-icons">delete_forever</i>
+                            <i className="small material-icons deleteIcon">delete_forever</i>
                         </td>
                     </tr>
 

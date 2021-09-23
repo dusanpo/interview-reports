@@ -2,14 +2,21 @@ import React from 'react'
 import SingleListReport from "./SingleListReport";
 import "./ReportsList.css"
 
-const ReportsList = (props) => {
+const ReportsList = ({search, query, reports}) => {
+    const onSearch = (q)=>{
+        search({query: q})
+    }
      
         return (
            <>
             <div className="container">
                 <div className="flex-report">
                     <div className="flex-report-inner">
-                        <input  type="search" name="search" placeholder="Search ..." />
+                        <input  type="search" name="search" placeholder="Search ..."
+                        onChange={(e)=>onSearch(e.target.value)}
+                        value={query}
+
+                        />
                     </div>
                     <div className="flex-report-inner">
                         <i className="medium material-icons">add</i>
@@ -19,7 +26,7 @@ const ReportsList = (props) => {
             </div>
             <div>
             <SingleListReport 
-                reports = {props.reports}
+                reports = {reports}
             />
             </div>
 
