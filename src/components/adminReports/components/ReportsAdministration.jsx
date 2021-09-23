@@ -8,7 +8,7 @@ class ReportsAdministration extends React.Component {
         console.log(props);
         this.state = {
             reports: [],
-            filteredReports: []
+            query: ""
         }
     }
 
@@ -33,10 +33,13 @@ class ReportsAdministration extends React.Component {
 
     }
     render() {
+        const filteredUsers = this.state.reports.filter(report => report.companyName.toLowerCase().includes(this.state.query.toLowerCase().trim()));
         return (
             <div>
                 <ReportsList 
-                    reports={this.state.reports}
+                    //reports={this.state.reports}
+                    reports = {filteredUsers}
+                    search={(q)=>this.setState(q)} query={this.state.query}
                 /> 
             </div>
         )
