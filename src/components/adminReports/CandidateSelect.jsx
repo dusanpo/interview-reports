@@ -34,7 +34,7 @@ class SelectCandidate extends React.Component {
 
   searchedCandidates = (textInput) => {
     const newCandidate = this.state.candidates.filter((candidate) => {
-      return candidate.name.toLowerCase().includes(textInput.toLowerCase());
+      return candidate.name.toLowerCase().includes(textInput.toLowerCase().trim());
     });
     this.setState({
       filteredCandidates: newCandidate,

@@ -14,7 +14,7 @@ class SelectCompany extends React.Component {
   }
   searchCompanies = (event) => {
     const newCompany = this.state.listOfCompanies.filter((company) =>
-      company.name.toLowerCase().includes(event.target.value.toLowerCase())
+      company.name.toLowerCase().includes(event.target.value.toLowerCase().trim())
     );
     this.setState({ filteredCompanies: newCompany });
   };
