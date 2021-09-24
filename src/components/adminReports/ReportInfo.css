@@ -2,3 +2,7 @@
     color: white;
     background-color: gray;
 }
+
+.clickButton{
+    margin-left:0.5rem !important;
+}

@@ -12,7 +12,7 @@ const SearchCandidate = ({ searchedCandidates }) => {
         <div className="col"></div>
         <div className="col">
           <span>
-            <i class="small material-icons">search</i>
+            <i className="small material-icons">search</i>
           </span>
           <input
             type="text"

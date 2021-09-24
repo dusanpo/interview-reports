@@ -68,7 +68,7 @@ const ReportInfo = ({
           Back
         </button>
         <Link to="/reportsAdministration">
-          <button className="btn-large #008B8B" onClick={submitReport} type="submit">
+          <button className="btn-large #008B8B clickButton" onClick={submitReport} type="submit">
             Submit
         </button>
         </Link>
