@@ -9,7 +9,7 @@ const SearchCompanies = (props) => {
         <h2 className="col"> </h2>
         <div className="col">
           <span>
-            <i class="small material-icons">search</i>
+            <i className="small material-icons">search</i>
           </span>
           <input
             

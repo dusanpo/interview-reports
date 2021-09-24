@@ -1,6 +1,8 @@
 import React from "react";
 import CompanySingle from './CompanySingle';
-import SearchCompanies from "./SearchCompanies"
+import SearchCompanies from "./SearchCompanies";
+import "./CompanySelect.css";
+
 
 class SelectCompany extends React.Component {
   constructor(props) {
@@ -51,10 +53,10 @@ class SelectCompany extends React.Component {
             />
           ))}
           <div>
-            <button className="btn-large #008B8B" onClick={this.props.prevStep}>
+            <button className="btn-large #008B8B " onClick={this.props.prevStep}>
               Back
             </button>
-            <button className="btn-large #008B8B" onClick={this.props.nextStep}>
+            <button className="btn-large #008B8B clickButton" onClick={this.props.nextStep}>
               Next
             </button>
           </div>

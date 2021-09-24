@@ -8,6 +8,7 @@ class SingleListReport extends React.Component {
         super(props)
         console.log(props);
         this.state = {
+          reports:[],
             show: false,
             report: {
                 candidateName:"",
@@ -19,6 +20,53 @@ class SingleListReport extends React.Component {
             } 
         }
     }
+    
+    getUsers = () =>{
+        const USER_ACCESS_TOKEN = JSON.parse(localStorage.getItem("token"));
+       
+       fetch("http://localhost:3333/api/reports", {
+         method: "GET",
+         headers: {
+           "Content-Type": "application/json",
+           "Authorization": "Bearer " + USER_ACCESS_TOKEN,
+         },
+      }).then((res) => {
+             
+       return res.json();
+     }).then((candidateReport) =>this.setState({
+         reports: candidateReport
+   
+     }))
+   
+      
+   }
+
+   componentDidMount(){
+    this.getUsers();
+}
+
+deleteReport = (id) =>{
+    const USER_ACCESS_TOKEN = JSON.parse(localStorage.getItem("token")); 
+    if(window.confirm("Thss will be deleted! Are you sure?")){
+    fetch(`http://localhost:3333/api/reports/${id}`,{
+      method:"DELETE",
+      headers: {
+              "Content-Type": "application/json",
+              "Authorization": "Bearer " + USER_ACCESS_TOKEN,
+            },
+
+    }).then((result)=>{
+        return result.json();
+    }).then((resp)=>{
+          
+         console.log(resp)
+         this.getUsers();
+         
+
+        })
+    }
+  }
+
 
     openModal(report) {
         report.interviewDate = getDate(report.interviewDate);
@@ -34,8 +82,8 @@ class SingleListReport extends React.Component {
         return (
         <>
             <table className="responsive-table centered highlight container">
-                {this.props.reports.map((report, index) => (
-                    <tr key={index} className="flex-single">
+                {this.props.reports.map((report) => (
+                    <tr key={report.id} className="flex-single">
                         <td className="flex-single-div">
                             <h5>{report.companyName}</h5>
                             <p className="left-align">Company</p>
@@ -54,7 +102,7 @@ class SingleListReport extends React.Component {
                         </td>
                         <td className="flex-single-row">
                             <i className="small material-icons" onClick={()=>this.openModal(report)}>remove_red_eye</i>
-                            <i className="small material-icons deleteIcon">delete_forever</i>
+                            <i className="small material-icons deleteIcon" onClick = {()=>this.deleteReport(report.id)}>delete_forever</i>
                         </td>
                     </tr>
 
