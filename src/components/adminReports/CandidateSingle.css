@@ -1,0 +1,25 @@
+.flexx{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.candidate-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.candidate-image{
+    flex: 20%;
+}
+.candidate-stacked{
+    flex:80%;
+}
+.candidate-content{
+    display: flex;
+    flex-direction: column;
+}

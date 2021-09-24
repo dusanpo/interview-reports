@@ -45,16 +45,18 @@ class SelectCandidate extends React.Component {
     return (
       <div>
         <SearchCandidate searchedCandidates={this.searchedCandidates} />
-        <div>
-          <div className="">
-            {this.state.filteredCandidates.map((candidate, i) => (
-              <CandidateSingle
-                
-                getName={this.props.getName}
-                key={i}
-                candidate={candidate}
-              />
-            ))}
+        <div className="col">
+          <div className="flex-display">
+            <div className="row">
+                {this.state.filteredCandidates.map((candidate, i) => (
+                <CandidateSingle
+                    
+                    getName={this.props.getName}
+                    key={i}
+                    candidate={candidate}
+                />
+                ))}
+            </div>
           </div>
           <div>
             <button className="btn-large #008B8B" onClick={this.props.nextStep}>
