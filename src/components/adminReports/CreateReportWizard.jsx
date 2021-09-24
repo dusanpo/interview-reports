@@ -97,9 +97,9 @@ class CreateReportsWizard extends React.Component {
                     <div >
                       <div className="col s4">
                         <Sidebar page={this.state.step} />
-                        <div >
-                          <h4 className="col"> {this.state.candidateName}</h4>
-                          <p className="col">Candidate:</p>
+                        <div className="col">
+                          <p className="row">Candidate:</p>
+                          <h4 className="row"> {this.state.candidateName}</h4>
                         </div>
                       </div>
                     </div>
@@ -123,12 +123,12 @@ class CreateReportsWizard extends React.Component {
                   <div className="row">
                     <div className="col s4">
                       <Sidebar page={this.state.step} />
-                      <div className="row">
-                        <div>
-                          <h4 className="col"> {this.state.candidateName}</h4>
-                          <p className="col">Candidate:</p>
-                          <h4 className="col"> {this.state.companyName}</h4>
-                          <p className="col">Company:</p>
+                      <div className="col">
+                        <div className="col">
+                          <p className="row">Candidate:</p>
+                          <h4 className="row"> {this.state.candidateName}</h4>
+                          <p className="row">Company:</p>
+                          <h4 className="row"> {this.state.companyName}</h4>
                         </div>
                       </div>
                     </div>
