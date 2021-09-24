@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-export default function Search ({search, query}){
+const Search  = ({search, query}) =>{
 
     const onSearch = (q)=>{
         search({query: q})
@@ -20,5 +20,5 @@ export default function Search ({search, query}){
    
     )
 }
-
+export default Search;
 

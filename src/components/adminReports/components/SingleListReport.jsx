@@ -47,7 +47,7 @@ class SingleListReport extends React.Component {
 
 deleteReport = (id) =>{
     const USER_ACCESS_TOKEN = JSON.parse(localStorage.getItem("token")); 
-    if(window.confirm("Thss will be deleted! Are you sure?")){
+    if(window.confirm("This will be deleted! Are you sure?")){
     fetch(`http://localhost:3333/api/reports/${id}`,{
       method:"DELETE",
       headers: {
