@@ -1,5 +1,7 @@
 import React from 'react'
 import SingleListReport from "./SingleListReport";
+//import CreateReportsWizard from "../../adminReports/CreateReportWizard";
+import { Link } from 'react-router-dom'
 import "./ReportsList.css"
 
 const ReportsList = ({search, query, reports}) => {
@@ -19,8 +21,9 @@ const ReportsList = ({search, query, reports}) => {
                         />
                     </div>
                     <div className="flex-report-inner">
-                        <i className="medium material-icons">add</i>
-                        <p>Create Report</p>
+                        <Link to ="/createReportsWizard">
+                            <button className = "btn-large #008B8B">Create Report</button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -28,6 +31,7 @@ const ReportsList = ({search, query, reports}) => {
             <SingleListReport 
                 reports = {reports}
             />
+            
             </div>
 
             </>
