@@ -45,7 +45,7 @@ const Header = () => {
 <ul className = "sidenav" id = "mobile-nav">
  <li><Link to="/">Candidates</Link></li>
  <li><Link to="/reportsAdministration">Reports</Link></li>
-  <li onClick = {() =>{
+ <li onClick = {() =>{
     localStorage.removeItem("token")
     window.location.assign('/')
     }}><a href = "/#" className = "navLog">Log out</a></li>
